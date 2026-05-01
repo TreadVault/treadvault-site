@@ -3,136 +3,199 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>TreadVault | Premium Tire Storage</title>
+<title>TreadVault</title>
 
 <style>
 *{box-sizing:border-box}
-body{margin:0;background:#050505;color:#fff;font-family:Arial,sans-serif}
+body{margin:0;background:#000;color:#fff;font-family:Arial,sans-serif}
 a{text-decoration:none;color:inherit}
-nav{position:fixed;top:0;width:100%;z-index:99;background:rgba(0,0,0,.85);padding:16px 24px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #d4af37}
-.logo{font-weight:900;color:#d4af37;font-size:22px;letter-spacing:2px}
-nav a{margin-left:16px;font-weight:bold}
-.call{background:#d4af37;color:#000;padding:10px 16px;border-radius:25px}
 
 .hero{
+  position:relative;
+  width:100%;
   min-height:100vh;
-  background:url("hero.jpg") center/cover no-repeat;
-  display:flex;
-  align-items:end;
-  justify-content:center;
-  padding:120px 20px 50px;
+  background:url("hero.jpg") center top/cover no-repeat;
 }
-.heroBox{
-  background:rgba(0,0,0,.72);
-  border:1px solid #d4af37;
-  border-radius:22px;
-  padding:28px;
-  max-width:900px;
+
+/* REAL CLICKABLE BUTTONS OVER THE IMAGE */
+.hero-link{
+  position:absolute;
+  z-index:10;
+  display:block;
+  border-radius:40px;
+}
+
+/* Make a Reservation button area */
+.reserve-click{
+  left:3.2%;
+  top:67%;
+  width:18.8%;
+  height:7.5%;
+}
+
+/* Phone button area */
+.phone-click{
+  left:23.5%;
+  top:67%;
+  width:22%;
+  height:7.5%;
+}
+
+/* NAV CLICK AREAS */
+.services-click{right:35%;top:6%;width:7%;height:5%}
+.pricing-click{right:27%;top:6%;width:6%;height:5%}
+.how-click{right:18%;top:6%;width:8%;height:5%}
+.reserve-nav-click{right:9%;top:6%;width:7%;height:5%}
+.call-nav-click{right:2%;top:4.5%;width:12%;height:7%}
+
+section{
+  padding:80px 24px;
   text-align:center;
+  background:#050505;
 }
-h1{font-size:42px;margin:0 0 12px}
-.gold{color:#d4af37}
-.btns{margin-top:22px}
-.btn{display:inline-block;margin:8px;padding:14px 22px;border-radius:30px;font-weight:900}
-.primary{background:#d4af37;color:#000}
-.secondary{border:1px solid #d4af37;color:#d4af37}
 
-section{padding:80px 22px;text-align:center}
-h2{font-size:34px;color:#d4af37}
-.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;max-width:1100px;margin:auto}
-.card{border:1px solid #d4af37;border-radius:20px;padding:24px;background:#111}
-.price{font-size:42px;font-weight:900}
-.card ul{text-align:left;line-height:1.8}
+h2{
+  color:#d4af37;
+  font-size:36px;
+}
 
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;max-width:1000px;margin:auto}
-.step{border:1px solid #333;padding:22px;border-radius:18px;background:#0d0d0d}
-.step span{color:#d4af37;font-size:28px;font-weight:900}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+  max-width:1100px;
+  margin:auto;
+}
 
-form{max-width:650px;margin:auto}
+.card{
+  border:1px solid #d4af37;
+  border-radius:20px;
+  padding:25px;
+  background:#111;
+}
+
+.price{
+  font-size:42px;
+  font-weight:bold;
+  color:#fff;
+}
+
+form{
+  max-width:650px;
+  margin:auto;
+}
+
 input,textarea,select{
-  width:100%;padding:15px;margin:9px 0;
-  background:#080808;color:#fff;border:1px solid #d4af37;border-radius:10px;font-size:16px
+  width:100%;
+  padding:15px;
+  margin:9px 0;
+  background:#080808;
+  color:#fff;
+  border:1px solid #d4af37;
+  border-radius:10px;
+  font-size:16px;
 }
+
 textarea{min-height:120px}
-button{width:100%;padding:16px;background:#d4af37;color:#000;border:0;border-radius:30px;font-weight:900;font-size:16px}
 
-footer{text-align:center;padding:35px;color:#aaa;border-top:1px solid #222}
-footer a{color:#d4af37;margin:0 10px}
+button{
+  width:100%;
+  padding:16px;
+  background:#d4af37;
+  color:#000;
+  border:0;
+  border-radius:30px;
+  font-weight:bold;
+  font-size:16px;
+}
 
+footer{
+  text-align:center;
+  padding:35px;
+  color:#aaa;
+  background:#000;
+  border-top:1px solid #222;
+}
+
+footer a{color:#d4af37}
+
+/* MOBILE */
 @media(max-width:800px){
-  nav{display:block;text-align:center}
-  nav div:last-child{margin-top:12px}
-  nav a{margin:6px;font-size:13px}
-  h1{font-size:32px}
-  .grid,.steps{grid-template-columns:1fr}
-  .hero{min-height:85vh;background-position:center top}
+  .hero{
+    min-height:78vh;
+    background-size:cover;
+    background-position:center top;
+  }
+
+  .reserve-click{
+    left:7%;
+    top:64%;
+    width:42%;
+    height:8%;
+  }
+
+  .phone-click{
+    left:52%;
+    top:64%;
+    width:40%;
+    height:8%;
+  }
+
+  .services-click,
+  .pricing-click,
+  .how-click,
+  .reserve-nav-click,
+  .call-nav-click{
+    display:none;
+  }
+
+  .grid{
+    grid-template-columns:1fr;
+  }
 }
 </style>
 </head>
 
 <body>
 
-<nav>
-  <div class="logo">TREADVAULT</div>
-  <div>
-    <a href="#services">Services</a>
-    <a href="#pricing">Pricing</a>
-    <a href="#how">How It Works</a>
-    <a href="#reserve">Reserve</a>
-    <a class="call" href="tel:+12033075225">Call</a>
-  </div>
-</nav>
-
 <header class="hero">
-  <div class="heroBox">
-    <h1>Premium Tire Storage <span class="gold">& Concierge Service</span></h1>
-    <p>Secure indoor tire storage with white-glove pickup & return delivery.</p>
-    <div class="btns">
-      <a class="btn primary" href="#reserve">Make a Reservation</a>
-      <a class="btn secondary" href="tel:+12033075225">Call/Text (203) 307-5225</a>
-    </div>
-  </div>
+  <a class="hero-link services-click" href="#services"></a>
+  <a class="hero-link pricing-click" href="#pricing"></a>
+  <a class="hero-link how-click" href="#how"></a>
+  <a class="hero-link reserve-nav-click" href="#reserve"></a>
+  <a class="hero-link call-nav-click" href="tel:+12033075225"></a>
+
+  <a class="hero-link reserve-click" href="#reserve"></a>
+  <a class="hero-link phone-click" href="tel:+12033075225"></a>
 </header>
 
 <section id="services">
   <h2>Why TreadVault</h2>
   <div class="grid">
-    <div class="card"><h3>Secure Indoor Storage</h3><p>Protect your tire investment in a clean, organized storage process.</p></div>
-    <div class="card"><h3>Pickup & Return</h3><p>White-glove convenience without lifting heavy tires yourself.</p></div>
-    <div class="card"><h3>Luxury Vehicle Friendly</h3><p>Built for premium, performance, and daily vehicles.</p></div>
-    <div class="card"><h3>Seasonal Reminders</h3><p>We help you stay ready when tire season changes.</p></div>
+    <div class="card"><h3>Secure Storage</h3><p>Clean indoor tire storage designed to protect your investment.</p></div>
+    <div class="card"><h3>Pickup & Return</h3><p>We pick up, store, and return your tires when needed.</p></div>
+    <div class="card"><h3>Premium Care</h3><p>Every set is handled with white-glove attention.</p></div>
+    <div class="card"><h3>Seasonal Reminders</h3><p>We remind you when it’s time to switch.</p></div>
   </div>
 </section>
 
 <section id="pricing">
   <h2>Pricing Plans</h2>
   <div class="grid">
-    <div class="card">
-      <h3>Basic</h3><div class="price">$299</div><p>/ season</p>
-      <ul><li>Secure indoor storage</li><li>Tire inspection</li><li>Seasonal reminder</li><li>Pickup add-on</li></ul>
-    </div>
-    <div class="card">
-      <h3>Concierge</h3><div class="price">$449</div><p>/ season</p>
-      <ul><li>Everything in Basic</li><li>Pickup & return delivery</li><li>Tire cleaning</li><li>Priority scheduling</li></ul>
-    </div>
-    <div class="card">
-      <h3>Elite</h3><div class="price">$649</div><p>/ season</p>
-      <ul><li>Everything in Concierge</li><li>Protection treatment</li><li>VIP priority service</li><li>White glove experience</li></ul>
-    </div>
-    <div class="card">
-      <h3>Annual VIP</h3><div class="price">$799</div><p>/ year</p>
-      <ul><li>Year-round protection</li><li>2 seasonal services</li><li>Best value</li><li>Maximum care</li></ul>
-    </div>
+    <div class="card"><h3>Basic</h3><div class="price">$299</div><p>Per Season</p></div>
+    <div class="card"><h3>Concierge</h3><div class="price">$449</div><p>Per Season</p></div>
+    <div class="card"><h3>Elite</h3><div class="price">$649</div><p>Per Season</p></div>
+    <div class="card"><h3>Annual Plan</h3><div class="price">$799</div><p>Per Year</p></div>
   </div>
 </section>
 
 <section id="how">
   <h2>How It Works</h2>
-  <div class="steps">
-    <div class="step"><span>01</span><h3>Reserve</h3><p>Submit the form or call us.</p></div>
-    <div class="step"><span>02</span><h3>Pickup</h3><p>We schedule your pickup date.</p></div>
-    <div class="step"><span>03</span><h3>Store</h3><p>Your tires are labeled and stored.</p></div>
-    <div class="step"><span>04</span><h3>Return</h3><p>We return them when needed.</p></div>
+  <div class="grid">
+    <div class="card"><h3>1. Reserve</h3><p>Submit the form or call us.</p></div>
+    <div class="card"><h3>2. Pickup</h3><p>We schedule pickup.</p></div>
+    <div class="card"><h3>3. Store</h3><p>Your tires are labeled and stored.</p></div>
+    <div class="card"><h3>4. Return</h3><p>We return them when needed.</p></div>
   </div>
 </section>
 
@@ -147,13 +210,15 @@ footer a{color:#d4af37;margin:0 10px}
     <input type="number" name="tire_sets" placeholder="How Many Tire Sets Need Storage?" required>
     <input type="date" name="pickup_date" required>
     <input type="text" name="location" placeholder="City / Zip Code" required>
+
     <select name="plan">
       <option value="">Select Preferred Plan</option>
       <option>Basic - $299 / season</option>
       <option>Concierge - $449 / season</option>
       <option>Elite - $649 / season</option>
-      <option>Annual VIP - $799 / year</option>
+      <option>Annual Plan - $799 / year</option>
     </select>
+
     <textarea name="message" placeholder="Additional Details"></textarea>
     <button type="submit">Submit Reservation Request</button>
   </form>
@@ -161,8 +226,10 @@ footer a{color:#d4af37;margin:0 10px}
 
 <footer>
   <p>TreadVault • Store It • Protect It • Trust It</p>
-  <p>Call/Text: <a href="tel:+12033075225">(203) 307-5225</a> | <a href="mailto:contact@treadvault.com">contact@treadvault.com</a></p>
-  <p><a href="#">Instagram</a> <a href="#">Facebook</a></p>
+  <p>
+    <a href="tel:+12033075225">(203) 307-5225</a> |
+    <a href="mailto:contact@treadvault.com">contact@treadvault.com</a>
+  </p>
 </footer>
 
 </body>
