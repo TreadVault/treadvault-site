@@ -6,253 +6,136 @@
 <title>TreadVault</title>
 
 <style>
-body {
-  margin:0;
-  font-family: Arial, sans-serif;
-  background:#000;
-  color:#fff;
-}
+body { margin:0; background:#000; color:#fff; font-family:Arial; }
 
-/* NAV */
 .nav {
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:20px 40px;
-  border-bottom:1px solid gold;
+display:flex; justify-content:space-between; padding:20px 40px;
+border-bottom:1px solid gold;
 }
 
-.nav a {
-  color:white;
-  margin:0 15px;
-  text-decoration:none;
-}
+.nav a { color:white; margin:0 10px; text-decoration:none; }
 
-.call-btn {
-  background:gold;
-  color:black;
-  padding:10px 20px;
-  border-radius:25px;
-  text-decoration:none;
-}
-
-/* HERO */
 .hero {
-  position:relative;
-  height:90vh;
-  background:url("assets/hero.jpg") center/cover no-repeat;
-  display:flex;
-  align-items:center;
-  padding-left:80px;
+height:90vh;
+background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.9)),
+url("assets/hero.jpg") center/cover no-repeat;
+display:flex; align-items:center; padding-left:60px;
 }
 
-.hero h1 {
-  font-size:60px;
-  max-width:600px;
+.hero h1 { font-size:55px; }
+
+.section { padding:80px 30px; text-align:center; }
+
+.pricing { display:flex; gap:20px; flex-wrap:wrap; justify-content:center; }
+
+.box {
+border:1px solid gold; padding:30px; width:250px; border-radius:15px;
 }
 
-.hero-buttons {
-  margin-top:20px;
-}
-
-.hero-buttons a {
-  margin-right:15px;
-  padding:15px 25px;
-  border-radius:30px;
-  text-decoration:none;
-}
-
-.reserve-btn {
-  background:gold;
-  color:black;
-}
-
-.call2-btn {
-  border:2px solid gold;
-  color:gold;
-}
-
-/* WHY */
-.section {
-  padding:80px 40px;
-  text-align:center;
-}
-
-.cards {
-  display:flex;
-  justify-content:center;
-  gap:20px;
-  flex-wrap:wrap;
-}
-
-.card {
-  border:1px solid gold;
-  padding:30px;
-  width:250px;
-  border-radius:15px;
-}
-
-/* PRICING */
-.pricing {
-  display:flex;
-  justify-content:center;
-  gap:20px;
-  flex-wrap:wrap;
-}
-
-.price-box {
-  border:1px solid gold;
-  padding:30px;
-  width:250px;
-  border-radius:15px;
-}
-
-.price-box h2 {
-  font-size:40px;
-}
-
-/* FORM */
-.form {
-  max-width:800px;
-  margin:auto;
-}
+.form { max-width:700px; margin:auto; }
 
 .form input, .form select, .form textarea {
-  width:100%;
-  padding:15px;
-  margin:10px 0;
-  background:black;
-  border:1px solid gold;
-  color:white;
+width:100%; padding:12px; margin:10px 0;
+background:black; border:1px solid gold; color:white;
 }
 
-.form button {
-  background:gold;
-  padding:15px;
-  border:none;
-  border-radius:30px;
-  width:100%;
-}
-
-/* DATE FIX */
-input[type="date"] {
-  color:white;
-  background:black;
-}
-
-/* FOOTER */
-.footer {
-  text-align:center;
-  padding:40px;
-  border-top:1px solid gold;
+button {
+background:gold; border:none; padding:15px;
+width:100%; border-radius:25px;
 }
 </style>
-</head>
 
+</head>
 <body>
 
 <!-- NAV -->
 <div class="nav">
-  <h2>TREADVAULT</h2>
-  <div>
-    <a href="#services">Services</a>
-    <a href="#pricing">Pricing</a>
-    <a href="#reserve">Reserve</a>
-    <a href="#terms">Terms</a>
-  </div>
-  <a href="tel:2033075225" class="call-btn">Call</a>
+<h2>TREADVAULT</h2>
+<div>
+<a href="#pricing">Pricing</a>
+<a href="#reserve">Reserve</a>
+</div>
+<a href="tel:2033075225">Call</a>
 </div>
 
 <!-- HERO -->
 <div class="hero">
-  <div>
-    <h1>Premium Tire Storage & Concierge Service</h1>
-    <div class="hero-buttons">
-      <a href="#reserve" class="reserve-btn">Make Reservation</a>
-      <a href="tel:2033075225" class="call2-btn">Call / Text</a>
-    </div>
-  </div>
-</div>
-
-<!-- WHY -->
-<div id="services" class="section">
-  <h1>Why TreadVault</h1>
-  <div class="cards">
-    <div class="card">Secure Indoor Storage</div>
-    <div class="card">Pickup & Return</div>
-    <div class="card">Premium Care</div>
-    <div class="card">Seasonal Reminders</div>
-  </div>
+<h1>Premium Tire Storage & Concierge</h1>
 </div>
 
 <!-- PRICING -->
 <div id="pricing" class="section">
-  <h1>Pricing Plans</h1>
+<h1>Pricing</h1>
 
-  <div class="pricing">
-    <div class="price-box">
-      <h2>$99</h2>
-      <p>Monthly</p>
-    </div>
-
-    <div class="price-box">
-      <h2>$299</h2>
-      <p>Basic (Season)</p>
-    </div>
-
-    <div class="price-box">
-      <h2>$449</h2>
-      <p>Concierge</p>
-    </div>
-
-    <div class="price-box">
-      <h2>$799</h2>
-      <p>Annual</p>
-    </div>
-  </div>
-
-  <p style="margin-top:20px;">* Larger tires (SUV/Truck) may have additional cost</p>
+<div class="pricing">
+<div class="box">$99<br>Monthly</div>
+<div class="box">$299<br>Season</div>
+<div class="box">$449<br>Concierge</div>
+<div class="box">$799<br>Annual</div>
+</div>
 </div>
 
 <!-- FORM -->
 <div id="reserve" class="section">
-  <h1>Request Reservation</h1>
+<h1>Reserve</h1>
 
-  <div class="form">
-    <input placeholder="Full Name">
-    <input placeholder="Phone">
-    <input placeholder="Email">
+<form class="form" action="https://formspree.io/f/mpqbzbgj" method="POST">
 
-    <select>
-      <option>Select Package</option>
-      <option>Monthly</option>
-      <option>Basic</option>
-      <option>Concierge</option>
-      <option>Annual</option>
-    </select>
+<input name="name" placeholder="Full Name" required>
+<input name="phone" placeholder="Phone" required>
+<input name="email" placeholder="Email" required>
 
-    <input type="date">
+<!-- CAR SELECTOR -->
+<select id="make" required>
+<option>Select Make</option>
+<option>Toyota</option>
+<option>Honda</option>
+<option>Lexus</option>
+<option>BMW</option>
+<option>Mercedes</option>
+</select>
 
-    <textarea placeholder="Additional details"></textarea>
+<select id="model" name="car_model" required>
+<option>Select Model</option>
+</select>
 
-    <button>Submit</button>
-  </div>
+<select name="package">
+<option>Monthly</option>
+<option>Basic</option>
+<option>Concierge</option>
+<option>Annual</option>
+</select>
+
+<input type="date" name="date">
+
+<textarea name="details" placeholder="Details"></textarea>
+
+<button type="submit">Submit</button>
+
+</form>
 </div>
 
-<!-- TERMS -->
-<div id="terms" class="section">
-  <h1>Terms & Conditions</h1>
-  <p>
-  Tires stored at owner’s risk. TreadVault is not liable for pre-existing damage.
-  Pickup and delivery windows may vary. Payments are non-refundable after service begins.
-  </p>
-</div>
+<script>
+const models = {
+Toyota:["Camry","Corolla","Rav4"],
+Honda:["Civic","Accord","CRV"],
+Lexus:["RX","NX","IS"],
+BMW:["3 Series","5 Series","X5"],
+Mercedes:["C Class","E Class","GLE"]
+};
 
-<!-- FOOTER -->
-<div class="footer">
-  <h2>TREADVAULT</h2>
-  <p>(203) 307-5225</p>
-</div>
+document.getElementById("make").addEventListener("change", function(){
+let model = document.getElementById("model");
+model.innerHTML = "";
+
+models[this.value].forEach(car=>{
+let option = document.createElement("option");
+option.text = car;
+option.value = car;
+model.add(option);
+});
+});
+</script>
 
 </body>
 </html>
