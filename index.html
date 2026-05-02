@@ -6,136 +6,234 @@
 <title>TreadVault</title>
 
 <style>
-body { margin:0; background:#000; color:#fff; font-family:Arial; }
 
+/* RESET */
+body {
+  margin:0;
+  font-family: Arial, sans-serif;
+  background:#000;
+  color:#fff;
+}
+
+/* NAV */
 .nav {
-display:flex; justify-content:space-between; padding:20px 40px;
-border-bottom:1px solid gold;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 50px;
+  border-bottom:1px solid rgba(255,215,0,0.3);
 }
 
-.nav a { color:white; margin:0 10px; text-decoration:none; }
+.nav a {
+  color:white;
+  margin:0 15px;
+  text-decoration:none;
+}
 
+.call-btn {
+  background:gold;
+  color:black;
+  padding:10px 20px;
+  border-radius:30px;
+}
+
+/* HERO */
 .hero {
-height:90vh;
-background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.9)),
-url("assets/hero.jpg") center/cover no-repeat;
-display:flex; align-items:center; padding-left:60px;
+  height:100vh;
+  background:
+    linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.9)),
+    url("assets/hero.jpg") center/cover no-repeat;
+  display:flex;
+  align-items:center;
+  padding:0 80px;
 }
 
-.hero h1 { font-size:55px; }
-
-.section { padding:80px 30px; text-align:center; }
-
-.pricing { display:flex; gap:20px; flex-wrap:wrap; justify-content:center; }
-
-.box {
-border:1px solid gold; padding:30px; width:250px; border-radius:15px;
+.hero-content {
+  max-width:600px;
 }
 
-.form { max-width:700px; margin:auto; }
-
-.form input, .form select, .form textarea {
-width:100%; padding:12px; margin:10px 0;
-background:black; border:1px solid gold; color:white;
+.hero h1 {
+  font-size:58px;
+  line-height:1.1;
+  margin-bottom:20px;
 }
 
-button {
-background:gold; border:none; padding:15px;
-width:100%; border-radius:25px;
+.hero p {
+  opacity:.8;
 }
+
+.hero-buttons {
+  margin-top:25px;
+}
+
+.hero-buttons a {
+  padding:15px 25px;
+  border-radius:30px;
+  margin-right:15px;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+.reserve {
+  background:gold;
+  color:black;
+}
+
+.call2 {
+  border:2px solid gold;
+  color:gold;
+}
+
+/* SECTION */
+.section {
+  padding:100px 40px;
+  text-align:center;
+}
+
+/* PRICING */
+.pricing {
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  flex-wrap:wrap;
+}
+
+.price-card {
+  width:260px;
+  padding:40px;
+  border-radius:20px;
+  border:1px solid rgba(255,215,0,.4);
+  background:linear-gradient(145deg,#0a0a0a,#000);
+  transition:.3s;
+}
+
+.price-card:hover {
+  transform:translateY(-5px);
+  box-shadow:0 0 20px rgba(255,215,0,.4);
+}
+
+.price-card h2 {
+  font-size:45px;
+  margin:10px 0;
+}
+
+/* FORM */
+.form {
+  max-width:700px;
+  margin:auto;
+}
+
+.form input,
+.form select,
+.form textarea {
+  width:100%;
+  padding:15px;
+  margin:10px 0;
+  background:#000;
+  border:1px solid rgba(255,215,0,.4);
+  color:white;
+  border-radius:10px;
+}
+
+.form button {
+  width:100%;
+  padding:15px;
+  background:gold;
+  border:none;
+  border-radius:30px;
+}
+
+/* FOOTER */
+.footer {
+  padding:50px;
+  text-align:center;
+  border-top:1px solid rgba(255,215,0,.2);
+}
+
 </style>
-
 </head>
+
 <body>
 
 <!-- NAV -->
 <div class="nav">
-<h2>TREADVAULT</h2>
-<div>
-<a href="#pricing">Pricing</a>
-<a href="#reserve">Reserve</a>
-</div>
-<a href="tel:2033075225">Call</a>
+  <h2>TREADVAULT</h2>
+  <div>
+    <a href="#pricing">Pricing</a>
+    <a href="#reserve">Reserve</a>
+  </div>
+  <a href="tel:2033075225" class="call-btn">Call</a>
 </div>
 
 <!-- HERO -->
 <div class="hero">
-<h1>Premium Tire Storage & Concierge</h1>
+  <div class="hero-content">
+    <h1>Premium Tire Storage & Concierge Service</h1>
+    <p>Secure indoor storage, pickup & return, and premium care.</p>
+
+    <div class="hero-buttons">
+      <a href="#reserve" class="reserve">Make Reservation</a>
+      <a href="tel:2033075225" class="call2">Call / Text</a>
+    </div>
+  </div>
 </div>
 
 <!-- PRICING -->
 <div id="pricing" class="section">
-<h1>Pricing</h1>
+  <h1>Pricing</h1>
 
-<div class="pricing">
-<div class="box">$99<br>Monthly</div>
-<div class="box">$299<br>Season</div>
-<div class="box">$449<br>Concierge</div>
-<div class="box">$799<br>Annual</div>
-</div>
+  <div class="pricing">
+    <div class="price-card">
+      <h2>$99</h2>
+      <p>Monthly</p>
+    </div>
+
+    <div class="price-card">
+      <h2>$299</h2>
+      <p>Season</p>
+    </div>
+
+    <div class="price-card">
+      <h2>$449</h2>
+      <p>Concierge</p>
+    </div>
+
+    <div class="price-card">
+      <h2>$799</h2>
+      <p>Annual</p>
+    </div>
+  </div>
 </div>
 
 <!-- FORM -->
 <div id="reserve" class="section">
-<h1>Reserve</h1>
+  <h1>Reserve</h1>
 
-<form class="form" action="https://formspree.io/f/mpqbzbgj" method="POST">
+  <div class="form">
+    <input placeholder="Full Name">
+    <input placeholder="Phone">
+    <input placeholder="Email">
 
-<input name="name" placeholder="Full Name" required>
-<input name="phone" placeholder="Phone" required>
-<input name="email" placeholder="Email" required>
+    <select>
+      <option>Select Package</option>
+      <option>Monthly</option>
+      <option>Season</option>
+      <option>Concierge</option>
+      <option>Annual</option>
+    </select>
 
-<!-- CAR SELECTOR -->
-<select id="make" required>
-<option>Select Make</option>
-<option>Toyota</option>
-<option>Honda</option>
-<option>Lexus</option>
-<option>BMW</option>
-<option>Mercedes</option>
-</select>
+    <input type="date">
+    <textarea placeholder="Details"></textarea>
 
-<select id="model" name="car_model" required>
-<option>Select Model</option>
-</select>
-
-<select name="package">
-<option>Monthly</option>
-<option>Basic</option>
-<option>Concierge</option>
-<option>Annual</option>
-</select>
-
-<input type="date" name="date">
-
-<textarea name="details" placeholder="Details"></textarea>
-
-<button type="submit">Submit</button>
-
-</form>
+    <button>Submit</button>
+  </div>
 </div>
 
-<script>
-const models = {
-Toyota:["Camry","Corolla","Rav4"],
-Honda:["Civic","Accord","CRV"],
-Lexus:["RX","NX","IS"],
-BMW:["3 Series","5 Series","X5"],
-Mercedes:["C Class","E Class","GLE"]
-};
-
-document.getElementById("make").addEventListener("change", function(){
-let model = document.getElementById("model");
-model.innerHTML = "";
-
-models[this.value].forEach(car=>{
-let option = document.createElement("option");
-option.text = car;
-option.value = car;
-model.add(option);
-});
-});
-</script>
+<!-- FOOTER -->
+<div class="footer">
+  <h2>TREADVAULT</h2>
+  <p>(203) 307-5225</p>
+</div>
 
 </body>
 </html>
