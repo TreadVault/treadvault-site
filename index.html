@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>TreadVault | Premium Tire Storage & Concierge Service</title>
+<meta name="description" content="TreadVault provides secure indoor tire storage, pickup and return delivery, seasonal reminders, and premium tire concierge service for Connecticut and New York." />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+<style>
+:root{
+  --gold:#d4af37;--gold2:#b8860b;--black:#000;--panel:#0a0a0a;--soft:#151515;--white:#fff;--muted:#cfcfcf;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#000;color:#fff;font-family:Arial,Helvetica,sans-serif;overflow-x:hidden}
+a{text-decoration:none;color:inherit}.gold{color:var(--gold)}
+.site-nav{position:sticky;top:0;z-index:1000;background:rgba(0,0,0,.94);border-bottom:1px solid var(--gold);display:flex;align-items:center;justify-content:space-between;padding:16px 6%;backdrop-filter:blur(8px)}
+.nav-brand{display:flex;align-items:center;gap:14px;font-weight:900;letter-spacing:3px;color:var(--gold)}
+.nav-brand img{height:48px;width:auto}.nav-links{display:flex;align-items:center;gap:28px;font-weight:900}.nav-links a{transition:.2s}.nav-links a:hover{color:var(--gold)}.nav-call{background:linear-gradient(135deg,var(--gold),#f3d46f,var(--gold2));color:#000;padding:13px 25px;border-radius:999px;box-shadow:0 0 18px rgba(212,175,55,.25)}
+.hero{position:relative;min-height:calc(100vh - 82px);background:linear-gradient(90deg,rgba(0,0,0,.88),rgba(0,0,0,.38),rgba(0,0,0,.15)),url('assets/hero/hero-bg-clean.jpg') center/cover no-repeat;display:flex;align-items:center;padding:70px 6%;border-bottom:1px solid rgba(212,175,55,.45)}
+.hero-content{max-width:760px}.hero-logo{max-width:440px;width:78%;margin-bottom:38px}.eyebrow{color:var(--gold);font-weight:900;letter-spacing:4px;text-transform:uppercase;margin-bottom:14px}.hero h1{font-size:clamp(44px,6.2vw,92px);line-height:.95;margin:0 0 22px;text-transform:uppercase;letter-spacing:1px}.hero p{font-size:clamp(18px,2vw,25px);line-height:1.45;max-width:620px;color:#eee;margin:0 0 30px}.hero-actions{display:flex;flex-wrap:wrap;gap:18px;margin:28px 0 36px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:999px;font-weight:900;text-transform:uppercase;letter-spacing:.4px;padding:17px 28px;cursor:pointer;border:0}.btn-primary{background:linear-gradient(135deg,var(--gold),#f2d36d,var(--gold2));color:#000;box-shadow:0 0 22px rgba(212,175,55,.28)}.btn-outline{border:2px solid var(--gold);color:var(--gold);background:rgba(0,0,0,.45)}.trust-row{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;max-width:720px}.trust-item{border-left:1px solid var(--gold);padding-left:18px}.trust-item img{height:52px;width:auto;margin-bottom:10px}.trust-item strong{display:block;text-transform:uppercase;font-size:13px}.trust-item span{font-size:12px;color:#ddd}
+section{padding:88px 6%;text-align:center}.section-title{font-size:clamp(34px,4vw,58px);color:var(--gold);margin:0 0 18px}.section-sub{max-width:850px;margin:0 auto 42px;color:#ddd;font-size:18px;line-height:1.55}.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;max-width:1250px;margin:auto}.card{background:linear-gradient(180deg,#161616,#060606);border:1px solid var(--gold);border-radius:26px;padding:30px 24px;box-shadow:0 0 26px rgba(212,175,55,.13)}.card img.icon{height:65px;width:auto;margin-bottom:16px}.card h3{font-size:23px;margin:10px 0 12px}.card p{color:#ddd;line-height:1.55;margin:0}.pricing-section{position:relative;background:linear-gradient(rgba(0,0,0,.82),rgba(0,0,0,.88)),url('assets/hero/hero-bg.jpg') center/cover no-repeat}.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:1180px;margin:0 auto 28px}.price-card{position:relative;background:linear-gradient(180deg,#171717,#050505);border:1px solid var(--gold);border-radius:28px;padding:32px 24px 28px;min-height:350px;box-shadow:0 0 34px rgba(212,175,55,.16);display:flex;flex-direction:column}.badge{align-self:center;background:linear-gradient(135deg,var(--gold),#f2d36d,var(--gold2));color:#000;border-radius:999px;padding:8px 17px;font-size:13px;font-weight:900;margin-bottom:12px}.price-card h3{font-size:27px;margin:5px 0 10px}.price{font-size:58px;font-weight:900;line-height:1;margin:10px 0}.price small{font-size:16px;color:#ddd}.price-card ul{padding:0;margin:20px 0 0;text-align:left;list-style:none;line-height:1.75;color:#eee}.price-card li::before{content:'✓';color:var(--gold);font-weight:900;margin-right:9px}.custom-card{grid-column:span 3;display:grid;grid-template-columns:1.2fr .8fr;gap:25px;align-items:center;text-align:left;background:linear-gradient(90deg,#151515,#050505);border:1px solid var(--gold);border-radius:28px;padding:32px;max-width:1180px;margin:auto}.custom-card h3{font-size:32px;margin:0 0 10px}.custom-card p{color:#ddd;line-height:1.6}.policy-note{max-width:1050px;margin:28px auto 0;color:#ddd;line-height:1.6;border:1px solid rgba(212,175,55,.35);border-radius:18px;padding:20px;background:rgba(0,0,0,.55)}
+.mascot-band{display:grid;grid-template-columns:.8fr 1.2fr;gap:34px;align-items:center;max-width:1100px;margin:0 auto;text-align:left}.mascot-band img{max-width:320px;width:100%;margin:auto;display:block}.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}.step{padding:28px;border:1px solid rgba(212,175,55,.65);border-radius:22px;background:#090909}.step span{color:var(--gold);font-size:34px;font-weight:900}.form-section{background:radial-gradient(circle at center,rgba(212,175,55,.08),transparent 55%),#000}.form-box{max-width:980px;margin:auto;border:1px solid var(--gold);border-radius:30px;padding:38px;background:linear-gradient(180deg,#0a0a0a,#030303);box-shadow:0 0 32px rgba(212,175,55,.15)}form{display:grid;grid-template-columns:1fr 1fr;gap:18px}input,select,textarea{width:100%;padding:17px 18px;background:#080808;color:#fff;border:1px solid var(--gold);border-radius:13px;font-size:16px;outline:none}input:focus,select:focus,textarea:focus{box-shadow:0 0 0 3px rgba(212,175,55,.2)}textarea{grid-column:1/-1;min-height:130px}.full{grid-column:1/-1}.submit-btn{grid-column:1/-1;background:linear-gradient(135deg,var(--gold),#f2d36d,var(--gold2));color:#000;border:0;border-radius:999px;font-size:17px;font-weight:900;padding:18px;cursor:pointer;text-transform:uppercase}.terms-check{grid-column:1/-1;color:#ddd;text-align:left;font-size:14px}.terms-check input{width:auto;margin-right:8px}.terms-check a{color:var(--gold);font-weight:900;text-decoration:underline}.flatpickr-calendar{background:#fff!important;color:#000!important}.flatpickr-day,.flatpickr-weekday,.flatpickr-current-month,.flatpickr-monthDropdown-months,.numInput{color:#000!important}.flatpickr-day.selected{background:var(--gold)!important;border-color:var(--gold)!important;color:#000!important}
+.terms-section{text-align:left;max-width:1050px;margin:auto}.terms-box{background:#080808;border:1px solid rgba(212,175,55,.65);border-radius:24px;padding:30px;line-height:1.65;color:#ddd}.terms-box h3{color:var(--gold);margin-top:25px}.terms-box h3:first-child{margin-top:0}.terms-box ul{padding-left:20px}.footer{padding:68px 6%;text-align:center;border-top:1px solid #222;background:#000}.footer img.logo-footer{max-width:320px;width:80%;height:auto;margin:0 auto 20px;display:block}.footer a{color:var(--gold);font-weight:900}.footer .qr{max-width:185px;width:50%;margin:28px auto 0;display:block;border-radius:8px}.footer-links{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin-top:15px}
+@media(max-width:900px){.site-nav{display:block;text-align:center}.nav-brand{justify-content:center;margin-bottom:12px}.nav-links{justify-content:center;gap:14px;flex-wrap:wrap;font-size:14px}.hero{min-height:auto;padding:60px 6%;background-position:center}.hero-logo{width:82%;margin-bottom:20px}.trust-row,.cards,.pricing-grid,.steps{grid-template-columns:1fr}.custom-card{grid-column:span 1;grid-template-columns:1fr;text-align:center}.mascot-band{grid-template-columns:1fr;text-align:center}form{grid-template-columns:1fr}.hero-actions{justify-content:center}.hero-content{text-align:center}.trust-item{text-align:left}.price{font-size:50px}}
+</style>
+</head>
+<body>
+<nav class="site-nav">
+  <a class="nav-brand" href="#top"><img src="assets/branding/logo-icon.png" alt="TreadVault"><span>TREADVAULT</span></a>
+  <div class="nav-links">
+    <a href="#services">Services</a><a href="#pricing">Pricing</a><a href="#how">How It Works</a><a href="#reserve">Reserve</a><a href="#terms">Terms</a><a class="nav-call" href="tel:+12033075225">Call</a>
+  </div>
+</nav>
+<header id="top" class="hero">
+  <div class="hero-content">
+    <img class="hero-logo" src="assets/branding/logo.png" alt="TreadVault logo">
+    <div class="eyebrow">Premium Tire Storage</div>
+    <h1>Storage & Concierge Service</h1>
+    <p>Reclaim your garage space with secure indoor tire storage, white-glove pickup and return delivery, and premium care for your vehicle.</p>
+    <div class="hero-actions"><a class="btn btn-primary" href="#reserve">Make a Reservation</a><a class="btn btn-outline" href="tel:+12033075225">Call / Text (203) 307-5225</a></div>
+    <div class="trust-row">
+      <div class="trust-item"><img src="assets/icons/secure.png" alt=""><strong>Safe & Secure</strong><span>Indoor storage</span></div>
+      <div class="trust-item"><img src="assets/icons/delivery.png" alt=""><strong>Pickup & Return</strong><span>Concierge delivery</span></div>
+      <div class="trust-item"><img src="assets/icons/climate.png" alt=""><strong>Premium Care</strong><span>Handled carefully</span></div>
+      <div class="trust-item"><img src="assets/icons/luxury.png" alt=""><strong>Luxury Friendly</strong><span>For premium vehicles</span></div>
+    </div>
+  </div>
+</header>
+<section id="services">
+  <h2 class="section-title">Why TreadVault</h2>
+  <p class="section-sub">A premium storage experience for drivers who care about convenience, protection, and keeping their garage clean.</p>
+  <div class="cards">
+    <div class="card"><img class="icon" src="assets/icons/secure.png" alt=""><h3>Secure Indoor Storage</h3><p>Your tires are stored in a clean indoor facility designed to protect your investment.</p></div>
+    <div class="card"><img class="icon" src="assets/icons/delivery.png" alt=""><h3>Pickup & Return</h3><p>We pick up your tires, store them safely, and return them when you need them.</p></div>
+    <div class="card"><img class="icon" src="assets/icons/climate.png" alt=""><h3>Inspection & Care</h3><p>Every set is handled with white-glove attention and reviewed before storage.</p></div>
+    <div class="card"><img class="icon" src="assets/icons/luxury.png" alt=""><h3>Seasonal Reminders</h3><p>We help you stay ready when winter or summer tire season comes around.</p></div>
+  </div>
+</section>
+<section id="pricing" class="pricing-section">
+  <h2 class="section-title">Pricing Plans</h2>
+  <p class="section-sub">Flexible options for monthly, seasonal, and annual storage. Standard pricing applies to passenger vehicles, SUVs, luxury cars, and light trucks up to 24-inch wheels.</p>
+  <div class="pricing-grid">
+    <div class="price-card"><h3>Monthly Storage</h3><div class="price">$59</div><small>per month / per set</small><ul><li>Short-term storage</li><li>Indoor storage</li><li>Great for temporary needs</li><li>Pickup/return available as add-on</li></ul></div>
+    <div class="price-card"><span class="badge">POPULAR STARTER</span><h3>Basic Seasonal</h3><div class="price">$299</div><small>per season</small><ul><li>Secure indoor storage</li><li>Tire set labeling</li><li>Seasonal reminder</li><li>Pickup/return available as add-on</li></ul></div>
+    <div class="price-card"><span class="badge">MOST POPULAR</span><h3>Concierge</h3><div class="price">$449</div><small>per season</small><ul><li>Everything in Basic</li><li>Pickup and return delivery</li><li>Tire cleaning</li><li>Priority scheduling</li></ul></div>
+    <div class="price-card"><h3>Elite</h3><div class="price">$649</div><small>per season</small><ul><li>Everything in Concierge</li><li>Tire protection treatment</li><li>VIP priority service</li><li>White-glove experience</li></ul></div>
+    <div class="price-card"><span class="badge">BEST VALUE</span><h3>Annual VIP</h3><div class="price">$799</div><small>per year</small><ul><li>Year-round protection</li><li>Two seasonal services</li><li>Best value for recurring clients</li><li>Maximum care</li></ul></div>
+    <div class="price-card"><span class="badge">CUSTOM QUOTE</span><h3>Oversized / Commercial</h3><div class="price">Quote</div><small>for specialty tire sets</small><ul><li>26-inch+ wheels</li><li>Commercial tires</li><li>18-wheeler tires</li><li>Unusually heavy or oversized sets</li></ul></div>
+  </div>
+  <div class="policy-note"><strong>Size Policy:</strong> Standard pricing includes tire/wheel sets up to 24 inches for passenger vehicles, SUVs, luxury cars, and light trucks. Oversized sets, commercial tires, 26-inch+ wheels, specialty truck tires, and unusually heavy sets may require a custom quote.</div>
+</section>
+<section id="how">
+  <div class="mascot-band">
+    <img src="assets/mascot/vaulty.png" alt="Vaulty mascot">
+    <div><h2 class="section-title">How It Works</h2><p class="section-sub" style="margin-left:0">Simple, premium, and clear from the first reservation to the final return.</p><div class="steps"><div class="step"><span>01</span><h3>Reserve</h3><p>Submit your details and preferred plan.</p></div><div class="step"><span>02</span><h3>Confirm</h3><p>A concierge specialist confirms your request.</p></div><div class="step"><span>03</span><h3>Pickup</h3><p>We schedule pickup or drop-off.</p></div><div class="step"><span>04</span><h3>Store</h3><p>Your set is labeled, stored, and ready.</p></div></div></div>
+  </div>
+</section>
+<section id="reserve" class="form-section">
+  <h2 class="section-title">Request Your Reservation Today</h2>
+  <p class="section-sub">A TreadVault concierge specialist will reach out shortly to confirm availability, pickup details, package selection, and any oversized tire requirements.</p>
+  <div class="form-box">
+    <form action="https://formspree.io/f/mpqbzbgl" method="POST">
+      <input name="name" placeholder="Full Name" required><input name="phone" placeholder="Phone Number" required>
+      <input name="email" type="email" placeholder="Email Address" required><input name="zip" placeholder="City / Zip Code" required>
+      <select id="year" name="vehicle_year" required><option value="">Select Vehicle Year</option></select>
+      <select id="make" name="vehicle_make" required><option value="">Select Vehicle Make</option></select>
+      <select id="model" name="vehicle_model" required><option value="">Select Vehicle Model</option></select>
+      <input name="trim" placeholder="Trim / Details: F Sport, AWD, tire size, etc.">
+      <select name="wheel_size" required><option value="">Wheel / Tire Size</option><option>Up to 18 inches</option><option>19–20 inches</option><option>21–22 inches</option><option>23–24 inches</option><option>26 inches or larger / custom quote</option><option>Commercial or specialty tire / custom quote</option><option>Not sure</option></select>
+      <select name="plan" required><option value="">Select Preferred Package</option><option>Monthly Storage - $59/month per set</option><option>Basic Seasonal - $299/season</option><option>Concierge Seasonal - $449/season</option><option>Elite Seasonal - $649/season</option><option>Annual VIP - $799/year</option><option>Oversized / Commercial - Custom Quote</option></select>
+      <input id="pickupDate" name="pickup_date" placeholder="Select Pickup Date" required>
+      <select name="service_preference" required><option value="">Pickup or Drop-Off?</option><option>Pickup service requested</option><option>I can drop off</option><option>Not sure yet</option></select>
+      <textarea name="message" placeholder="Additional Details"></textarea>
+      <label class="terms-check"><input type="checkbox" required> I understand standard pricing applies up to 24-inch wheels and oversized/commercial sets may require a custom quote. I agree to the <a href="#terms">Terms & Conditions</a>.</label>
+      <button class="submit-btn" type="submit">Submit Reservation Request</button>
+    </form>
+  </div>
+</section>
+<section id="terms">
+  <h2 class="section-title">Terms & Conditions</h2>
+  <div class="terms-section"><div class="terms-box">
+    <h3>1. Reservation Requests</h3><p>Submitting a reservation form does not guarantee immediate pickup or storage availability. A TreadVault concierge specialist will contact the customer to confirm availability, service area, pricing, pickup/drop-off details, and scheduling.</p>
+    <h3>2. Standard Size Policy</h3><p>Standard pricing applies to passenger vehicles, SUVs, luxury cars, and light trucks with tire/wheel sets up to 24 inches. Oversized sets, 26-inch+ wheels, commercial tires, specialty truck tires, 18-wheeler tires, unusually heavy sets, or non-standard storage requests may require a custom quote.</p>
+    <h3>3. Pickup & Return Delivery</h3><p>Pickup and return delivery are subject to location, scheduling availability, weather, and service area. Additional fees may apply outside the normal service zone or for special handling requirements.</p>
+    <h3>4. Customer Information</h3><p>Customers are responsible for providing accurate vehicle, tire, wheel, and contact information. TreadVault may request photos, tire size, quantity, and condition details before confirming pricing.</p>
+    <h3>5. Tire Condition</h3><p>TreadVault may inspect tires upon intake for visible damage, excessive wear, unsafe condition, or special handling concerns. Existing damage, prior wear, dry rot, punctures, bent rims, cosmetic marks, or tire age are not the responsibility of TreadVault unless directly caused by confirmed mishandling while in TreadVault custody.</p>
+    <h3>6. Payment</h3><p>Pricing may be billed monthly, seasonally, annually, or by custom quote depending on the package selected. Storage may not begin until payment terms are confirmed. Late, unpaid, or abandoned storage balances may affect release of stored tire sets.</p>
+    <h3>7. Abandoned Property</h3><p>If a customer fails to respond to repeated contact attempts or fails to pay outstanding balances for an extended period, TreadVault may treat the stored tire set as abandoned according to applicable law and company policy.</p>
+    <h3>8. Liability</h3><p>TreadVault provides reasonable care while handling and storing customer tire sets. TreadVault is not responsible for manufacturer defects, pre-existing damage, natural tire aging, ordinary wear, or issues unrelated to storage/handling.</p>
+    <h3>9. Policy Updates</h3><p>TreadVault may update pricing, service areas, policies, and terms as the business grows. Customers will be informed of material changes that affect active reservations or storage agreements.</p>
+  </div></div>
+</section>
+<footer class="footer">
+  <img class="logo-footer" src="assets/branding/logo.png" alt="TreadVault">
+  <p>TreadVault • Store It • Protect It • Trust It</p>
+  <p><a href="tel:+12033075225">(203) 307-5225</a> | <a href="mailto:contact@treadvault.com">contact@treadvault.com</a></p>
+  <div class="footer-links"><a href="#pricing">Pricing</a><a href="#reserve">Reserve</a><a href="#terms">Terms & Conditions</a></div>
+  <img class="qr" src="assets/ui/qr.png" alt="TreadVault QR Code">
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script>
+flatpickr('#pickupDate',{minDate:'today',dateFormat:'m/d/Y'});
+const vehicleData={
+'Acura':['Integra','TLX','RDX','MDX'],'Alfa Romeo':['Giulia','Stelvio','Tonale'],'Audi':['A3','A4','A5','A6','A7','A8','Q3','Q5','Q7','Q8','e-tron'],'BMW':['2 Series','3 Series','4 Series','5 Series','7 Series','8 Series','X1','X3','X4','X5','X6','X7','i4','iX'],'Buick':['Encore','Envision','Enclave'],'Cadillac':['CT4','CT5','XT4','XT5','XT6','Escalade'],'Chevrolet':['Malibu','Camaro','Corvette','Trax','Equinox','Blazer','Tahoe','Suburban','Colorado','Silverado'],'Chrysler':['300','Pacifica'],'Dodge':['Charger','Challenger','Durango','Hornet'],'Ford':['Mustang','Escape','Edge','Explorer','Bronco','Expedition','Maverick','Ranger','F-150','Super Duty'],'Genesis':['G70','G80','G90','GV60','GV70','GV80'],'GMC':['Terrain','Acadia','Yukon','Canyon','Sierra'],'Honda':['Civic','Accord','HR-V','CR-V','Passport','Pilot','Odyssey','Ridgeline'],'Hyundai':['Accent','Elantra','Sonata','Venue','Kona','Tucson','Santa Fe','Palisade','Ioniq 5','Ioniq 6'],'Infiniti':['Q50','Q60','QX50','QX55','QX60','QX80'],'Jaguar':['XE','XF','F-Type','E-Pace','F-Pace','I-Pace'],'Jeep':['Wrangler','Cherokee','Grand Cherokee','Compass','Renegade','Gladiator','Wagoneer'],'Kia':['Forte','K5','Stinger','Soul','Seltos','Sportage','Sorento','Telluride','Carnival','EV6','EV9'],'Land Rover':['Range Rover','Range Rover Sport','Range Rover Velar','Range Rover Evoque','Defender','Discovery'],'Lexus':['IS','ES','GS','LS','UX','NX','RX','GX','LX','RC','LC','TX'],'Lincoln':['Corsair','Nautilus','Aviator','Navigator'],'Maserati':['Ghibli','Quattroporte','Levante','Grecale','GranTurismo'],'Mazda':['Mazda3','Mazda6','CX-30','CX-5','CX-50','CX-70','CX-90','MX-5 Miata'],'Mercedes-Benz':['A-Class','C-Class','E-Class','S-Class','CLA','CLS','GLA','GLB','GLC','GLE','GLS','G-Class','EQE','EQS'],'MINI':['Cooper','Clubman','Countryman'],'Mitsubishi':['Mirage','Outlander','Outlander Sport','Eclipse Cross'],'Nissan':['Sentra','Altima','Maxima','Kicks','Rogue','Murano','Pathfinder','Armada','Frontier','Titan','Z'],'Porsche':['718 Boxster','718 Cayman','911','Panamera','Macan','Cayenne','Taycan'],'Ram':['1500','2500','3500','ProMaster'],'Subaru':['Impreza','Legacy','Outback','Forester','Crosstrek','WRX','Ascent','BRZ'],'Tesla':['Model 3','Model S','Model X','Model Y','Cybertruck'],'Toyota':['Corolla','Camry','Avalon','Prius','GR86','Supra','RAV4','Highlander','4Runner','Sequoia','Sienna','Tacoma','Tundra','Land Cruiser'],'Volkswagen':['Jetta','Passat','Arteon','Golf','GTI','Tiguan','Atlas','Taos','ID.4'],'Volvo':['S60','S90','V60','XC40','XC60','XC90','C40']
+};
+const year=document.getElementById('year'),make=document.getElementById('make'),model=document.getElementById('model');
+for(let y=2026;y>=1990;y--){year.innerHTML+=`<option value="${y}">${y}</option>`}
+Object.keys(vehicleData).sort().forEach(m=>{make.innerHTML+=`<option value="${m}">${m}</option>`});
+make.addEventListener('change',()=>{model.innerHTML='<option value="">Select Vehicle Model</option>';(vehicleData[make.value]||[]).forEach(mod=>model.innerHTML+=`<option value="${mod}">${mod}</option>`)});
+</script>
+</body>
+</html>
